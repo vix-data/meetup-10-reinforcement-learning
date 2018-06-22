@@ -1,0 +1,36 @@
+
+#install.packages("ReinforcementLearning")
+library(ReinforcementLearning)
+
+#opcao de criar o modelo
+#data_new <- sampleExperience(N = 1000, env = env, states = states, actions = actions,
+#                             model = model, actionSelection = "epsilon-greedy", 
+#                             control = control)
+#control <- list(alpha = 0.2, gamma = 0.4, epsilon = 0.1)
+#modelottt <- ReinforcementLearning(tictactoe, s = "State", a = "Action", r = "Reward", 
+#                                   s_new = "NextState", iter = 2, control = control)
+
+
+#opcao carregar o modelo pronto
+load(file.choose())
+
+#consultar o modelo
+#potitica
+modelottt$Policy[".BB...XX."]
+
+#potitica ilegal
+modelottt$Policy["XBXBBXX.B"]
+
+#nao encontra politica
+modelottt$Policy[".X.B....."]
+
+
+#criar funcao jogotictac
+jogotictac(0)
+jogotictac(5)
+jogotictac(1)
+jogotictac(3)
+
+
+
+
